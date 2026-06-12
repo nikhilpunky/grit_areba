@@ -335,28 +335,33 @@ button, input, textarea, select {
 }
 
 .nav-cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-heading);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.5rem 1.2rem;
-  border: var(--border-thin);
-  background-color: var(--color-black);
-  color: var(--color-white);
-  transition: all var(--transition-speed) ease;
+  padding: 0.95rem 1.8rem;
+  border: 2px solid var(--color-black);
+  background-color: transparent;
+  color: var(--color-black);
+  border-radius: 999px;
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .nav-cta:hover {
-  background-color: var(--color-torch-orange);
+  background-color: rgba(0, 0, 0, 0.04);
   color: var(--color-black);
-  border-color: var(--color-torch-orange);
-  transform: translateY(-2px);
+  border-color: var(--color-black);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.06);
 }
 
 .header-nav.scrolled .nav-cta {
-  background-color: var(--color-white);
+  background-color: transparent;
   color: var(--color-black);
+  border-color: var(--color-black);
 }
 
 .header-nav.scrolled .nav-cta:hover {
@@ -1432,7 +1437,7 @@ select.form-control {
 .page-header {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 6rem 0 4rem 0;
+  padding: 10rem 0 4rem 0;
   border-bottom: var(--border-thick);
   position: relative;
   overflow: hidden;
@@ -1442,11 +1447,17 @@ select.form-control {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.88) 100%),
     linear-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
-  background-size: 40px 40px;
+  background-size: auto, 40px 40px, 40px 40px;
   pointer-events: none;
+  z-index: 0;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-header .section-title {
@@ -1454,6 +1465,7 @@ select.form-control {
   font-size: 4.5rem;
   line-height: 0.95;
   margin-bottom: 1rem;
+  text-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
 .page-header .section-subtitle {
@@ -1781,4 +1793,58 @@ select.form-control {
   .modal-card {
     padding: 2rem 1.5rem;
   }
+}
+
+/* Active state: keep nav-cta filled when on that page */
+.header-nav .nav-cta.active,
+.header-nav .nav-cta.active:focus-visible {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-black);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.header-nav.scrolled .nav-cta.active {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+
+/* Nav CTA (refined white pill with black outline) - appended override */
+.header-nav .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.9);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 999px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.06);
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              transform 0.12s ease,
+              box-shadow var(--transition-speed) ease;
+}
+
+.header-nav .nav-cta:hover,
+.header-nav .nav-cta:focus-visible {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+
+.header-nav.scrolled .nav-cta {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-nav.scrolled .nav-cta:hover,
+.header-nav.scrolled .nav-cta:focus-visible {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }

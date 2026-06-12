@@ -22,6 +22,7 @@
       
       <nav class="nav-links-wrapper">
         <ul class="nav-links">
+          <li class="nav-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
           <li class="nav-item"><a href="<?php echo esc_url( home_url( '/the-grit/' ) ); ?>">The Grit</a></li>
           <li class="nav-item"><a href="<?php echo esc_url( home_url( '/the-problem/' ) ); ?>">The Problem</a></li>
           <li class="nav-item"><a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>">About Us</a></li>

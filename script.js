@@ -37,10 +37,10 @@ function initNavigation() {
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPage) {
-      link.style.color = 'var(--color-torch-orange)';
-      link.parentElement.classList.add('active');
+      // add active class to the link itself so .nav-cta.active can style it
+      link.classList.add('active');
     } else {
-      link.parentElement.classList.remove('active');
+      link.classList.remove('active');
     }
   });
 }
