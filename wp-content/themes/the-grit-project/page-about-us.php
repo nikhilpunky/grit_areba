@@ -53,13 +53,6 @@ get_header(); ?>
       <!-- Note from Areebah with Portrait -->
       <section class="story-section-personal" id="areebah-note" style="border-top: 2px solid var(--color-black); padding-top: 4rem;">
         <div class="story-personal-grid">
-          <div class="personal-visual">
-            <div class="personal-img-wrapper">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/areebah_memon_portrait.png" alt="Areebah Fatima Memon - Founder of The Grit Project" class="hero-image">
-              <div class="personal-badge">Founder 💡</div>
-            </div>
-          </div>
-          
           <div class="personal-content">
             <span class="section-tagline">Behind The Vision</span>
             <h2 class="personal-title" style="font-size: 2.2rem;">A Note From Areebah</h2>
@@ -82,6 +75,13 @@ get_header(); ?>
                  class="btn btn-primary">
                 Chat Directly on WhatsApp
               </a>
+            </div>
+          </div>
+          
+          <div class="personal-visual">
+            <div class="personal-img-wrapper">
+              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/areebah_memon_portrait.png" alt="Areebah Fatima Memon - Founder of The Grit Project" class="hero-image">
+              <div class="personal-badge">Founder 💡</div>
             </div>
           </div>
         </div>

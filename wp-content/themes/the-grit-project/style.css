@@ -551,6 +551,60 @@ button, input, textarea, select {
   z-index: 10;
 }
 
+/* --- Founder Note --- */
+.story-personal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(240px, 0.65fr);
+  grid-template-areas: "content portrait";
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+  width: 100%;
+}
+
+.personal-content {
+  grid-area: content;
+  min-width: 0;
+  text-align: left;
+  justify-self: start;
+}
+
+.personal-visual {
+  grid-area: portrait;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: end;
+  width: 100%;
+}
+
+.personal-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  padding: 0.75rem;
+  background-color: var(--color-white);
+  border: var(--border-thick);
+  box-shadow: 10px 10px 0 var(--color-black);
+}
+
+.personal-img-wrapper .hero-image {
+  max-height: 440px;
+  object-fit: contain;
+}
+
+.personal-badge {
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  padding: 0.5rem 0.85rem;
+  background-color: var(--color-founder-gold);
+  border: var(--border-thin);
+  box-shadow: var(--shadow-flat-soft);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 /* --- Hero Animation Keyframes --- */
 @keyframes logoFadeScale {
   0% { opacity: 0; transform: scale(0.92); }
@@ -1759,6 +1813,9 @@ select.form-control {
   .story-personal-grid {
     display: grid;
     grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "content"
+      "portrait";
     gap: 2rem !important;
     align-items: center;
     text-align: left;
@@ -1778,7 +1835,7 @@ select.form-control {
   }
 
   .personal-img-wrapper {
-    max-width: 100%;
+    max-width: 300px;
   }
 }
 
