@@ -20,7 +20,11 @@
             <li><a href="<?php echo esc_url( home_url( '/the-problem/' ) ); ?>">The Problem</a></li>
             <li><a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>">About Us</a></li>
             <li><a href="<?php echo esc_url( home_url( '/what-you-get/' ) ); ?>">What You Get</a></li>
-          </ul>
+            </ul>
+            <ul class="footer-links-list">
+              <li>President: <a href="tel:+917378692885" style="text-transform:none;">+91 73786 92885</a></li>
+              <li>Vice President: <a href="tel:+918983733338" style="text-transform:none;">+91 89837 33338</a></li>
+            </ul>
         </div>
         
         <div class="footer-links-col">

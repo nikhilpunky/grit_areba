@@ -24,7 +24,7 @@ get_header(); ?>
         <!-- Bios Card Areebah -->
         <div class="bio-card" style="border-color: var(--color-founder-gold); box-shadow: 8px 8px 0px var(--color-founder-gold);">
           <h3 class="bio-name">Areebah Fatima Memon</h3>
-          <span class="bio-role" style="color: var(--color-founder-gold);">Founder</span>
+          <span class="bio-role" style="color: var(--color-founder-gold);">Founder & President</span>
           <ul class="bio-bullets">
             <li class="bio-bullet">NGO founder and school Executive Director (with 800+ Students)</li>
             <li class="bio-bullet">Published author – Asia Book of Records & World Book of Records</li>

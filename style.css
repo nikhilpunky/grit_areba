@@ -1770,18 +1770,28 @@ select.form-control {
   }
 
   .story-personal-grid {
+    display: grid;
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
-    text-align: center;
+    align-items: center;
+    text-align: left;
   }
 
   .personal-content {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .personal-signature {
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .personal-visual {
+    justify-content: center;
+  }
+
+  .personal-img-wrapper {
+    max-width: 100%;
   }
 }
 
